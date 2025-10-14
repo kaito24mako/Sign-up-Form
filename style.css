@@ -14,12 +14,7 @@ html {
     text-size-adjust: 100%;
     scroll-behavior: smooth;
     line-height: 1.5;
-    font-family:
-		system-ui,
-		"Segoe UI",
-		Helvetica,
-		Arial,
-		sans-serif;
+    font-family: system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
 }
 * {
     margin: 0;
@@ -30,7 +25,7 @@ html {
     list-style-type: none;
     text-decoration: none;
 
-    /* outline: 1px solid black; */
+    outline: 1px solid black;
 }
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
@@ -52,14 +47,40 @@ button {
 }
 
 /* General */
+:root {
+    --font-norse: "Norse", system-ui, "Segoe UI", Helvetica, sans-serif;
+    --font-segoe: "Segoe UI", Helvetica, sans-serif;
+    --border-light: 1px solid rgba(0, 0, 0, 0.35);
+    --border-medium: 1px solid rgba(0, 0, 0, 0.55);
+}
+body {
+   display: flex;
+}
 input {
-    border: 1px solid rgba(0, 0, 0, 0.349);
+    border: var(--border-light);
     border-radius: 4px;
 }
 
 /* Left section */
-.title-cont h1 {
-    font-family: "Norse", system-ui, "Segoe UI", Helvetica, sans-serif;
+.left-hero h1 {
+    font-family: var(--font-norse);
+}
+.left-hero {
+    position: relative;
+    width: 35vw;
+    height: 100vh;
+    color: white;
+}
+.left-hero .title-cont {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.856);
+}
+.left-hero #credit {
+    position: absolute;
+}
+.left-hero #background {
+    width: 100%;
+    height: 100%;
 }
 
 

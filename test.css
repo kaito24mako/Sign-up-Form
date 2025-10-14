@@ -55,10 +55,16 @@ button {
     --size-medium: clamp(1rem, 3vw, 1.7rem);
     --size-small: clamp(0.7rem, 2vw, 1.3rem);
     --size-vsmall: clamp(0.5rem, 1vw, 1rem);
-    --spacing-vlarge: 9rem;
-    --spacing-large: 4rem;
+
+    --spacing-vlarge: clamp(2rem, 7vw, 10rem);
+    --spacing-large: clamp(2rem, 4vw, 7rem);
     --spacing-medium: 2rem;
     --spacing-small: 0.1rem;
+
+    /* --spacing-vlarge: 9rem;
+    --spacing-large: 4rem;
+    --spacing-medium: 2rem;
+    --spacing-small: 0.1rem; */
     --border-light: 1px solid rgba(0, 0, 0, 0.35);
     --border-medium: 1px solid rgba(0, 0, 0, 0.55);
 }
@@ -124,11 +130,10 @@ input {
     display: flex;
     flex-direction: column;
     gap: var(--size-medium);
-    flex-wrap: wrap;
 
-    width: clamp(45ch, 57%, 75ch);  /* suggested line length */
+    width: clamp(45ch, 65%, 75ch);  /* suggested line length */
     max-width: 100%;  /* to prevent overflow */
-    padding: var(--spacing-vlarge) 0 var(--spacing-large) var(--spacing-large);
+    padding: var(--spacing-vlarge) var(--spacing-large) var(--spacing-large) var(--spacing-large);
     
     font-size: var(--size-medium);
 }

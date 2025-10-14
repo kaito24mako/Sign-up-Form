@@ -52,10 +52,16 @@ button {
 }
 
 /* General */
-body {
-    font-family: "Norse", system-ui, "Segoe UI", Helvetica, sans-serif;
-    background-color: black;
+input {
+    border: 1px solid rgba(0, 0, 0, 0.349);
+    border-radius: 4px;
 }
+
+/* Left section */
+.title-cont h1 {
+    font-family: "Norse", system-ui, "Segoe UI", Helvetica, sans-serif;
+}
+
 
 
 

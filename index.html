@@ -8,10 +8,68 @@
 </head>
 <body>
     
-    <section>
-        <header>
+    <section class="left-hero">
+        <div class="title-cont">
             <img src="./img/odin.png" width="120px" alt="The Odin Project logo">
-        </header>
+            <h1>ODIN</h1>
+        </div>
+        <span id="credit">
+            Photo by 
+            <a href="https://unsplash.com/@haliewestphoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                Halie West
+            </a> on 
+            <a href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                Unsplash
+            </a>
+        </span>
+        <figure id="background-image">
+            <img src="./img/bg.jpg" width="300px">
+        </figure>
     </section>
+
+    <main class="right-hero">
+        <header class="intro-cont">
+            <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.
+                Sign up <i>now</i> to get started.
+            </p>
+            <p>You <i>know</i> you want to.</p>
+        </header>
+        <form method="get">
+            <h2>Let's do this!</h2>
+
+            <label for="first-name">FIRST NAME</label>
+            <input type="text" id="first-name" name="first-name" placeholder="e.g., Bob">
+
+            <label for="last-name">LAST NAME</label>
+            <input type="text" id="last-name" name="last-name" placeholder="e.g., Smith">
+
+            <label for="email">EMAIL</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com">
+
+            <label for="phone">PHONE NUMBER</label>
+            <input 
+                type="tel" 
+                id="phone" 
+                name="phone" 
+                placeholder="e.g., 1243-567-890"
+                pattern="[0-9]{4}[0-9]{3}[0-9]{3}"
+                required
+            >
+
+            <label for="pwd">PASSWORD</label>
+            <input type="password" id="pwd" name="pwd">
+
+            <label for="confirm-pwd">CONFIRM PASSWORD</label>
+            <input type="password" id="confirm-pwd" name="confirm-pwd">
+        </form>
+        <div class="submit-cont">
+            <button type="submit">Create Account</button>
+            <p>
+                Already have an account?
+                <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0">Log in</a>
+            </p>
+        </div>
+    </main>
+
 </body>
 </html>

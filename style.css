@@ -51,8 +51,8 @@ button {
     --font-norse: "Norse", system-ui, "Segoe UI", Helvetica, sans-serif;
     --font-segoe: "Segoe UI", Helvetica, sans-serif;
     --size-vlarge: clamp(4rem, 6vw, 7rem);
-    --size-large: 4rem;
-    --size-medium: 2rem;
+    --size-large: clamp(2rem, 4vw, 5rem);
+    --size-medium: clamp(1rem, 3vw, 1.7rem);
     --size-small: 1rem;
     --size-vsmall: clamp(0.5rem, 1vw, 1rem);
     --spacing-small: 0.1rem;
@@ -73,7 +73,7 @@ input {
     justify-content: center;
     position: relative;
 
-    width: 35vw;
+    width: 45vw;
     height: 100vh;
 
     color: white;
@@ -110,8 +110,18 @@ input {
     color: orange;
 }
 
-.left-hero {
-
+/* Right section */
+.right-hero {
+    padding: 11rem 0 6rem 4rem; 
+}
+.right-hero .intro-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: clamp(45ch, 53%, 75ch);
+    
+    font-size: var(--size-medium);
+    
 }
 
 

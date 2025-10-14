@@ -50,16 +50,18 @@ button {
 :root {
     --font-norse: "Norse", system-ui, "Segoe UI", Helvetica, sans-serif;
     --font-segoe: "Segoe UI", Helvetica, sans-serif;
+    --color-green: #596D48;
     --size-vlarge: clamp(4rem, 6vw, 7rem);
     --size-large: clamp(2rem, 4vw, 5rem);
     --size-medium: clamp(1rem, 3vw, 1.7rem);
     --size-small: clamp(0.7rem, 2vw, 1.3rem);
-    --size-vsmall: clamp(0.5rem, 1vw, 1rem);
+    --size-vsmall: clamp(0.5rem, 1.5vw, 1rem);
     --spacing-vlarge: clamp(2rem, 7vw, 10rem);
     --spacing-large: clamp(2rem, 3vw, 6rem);
     --spacing-medium: clamp(0.5rem, 1vw, 1rem);
     --border-light: 1px solid rgba(0, 0, 0, 0.35);
     --border-medium: 1px solid rgba(0, 0, 0, 0.55);
+    --shadow: 0 6px 10px rgba(36, 35, 35, 0.2);
 }
 body {
    display: flex;
@@ -113,14 +115,13 @@ input {
 }
 
 /* Right section */
-
 .right-hero {
     width: 60vw;
     height: 100vh;
 
     background-color: rgb(235, 235, 235);
 }
-
+    /* Top-right container */
 .right-hero .intro-cont {
     display: flex;
     flex-direction: column;
@@ -130,10 +131,11 @@ input {
     max-width: 100%;  /* to prevent overflow */
     padding: var(--spacing-vlarge) var(--spacing-large) var(--spacing-large) var(--spacing-large);
 }
-
+    /* Middle-right container */
 .right-hero form {
     padding: var(--spacing-medium) var(--spacing-large) calc(var(--spacing-medium) + 2rem) var(--spacing-large);
     background-color: white;
+    box-shadow: var(--shadow);
 }
 .right-hero .form-inputs-cont {
     display: flex;
@@ -153,8 +155,35 @@ input {
     height: 2rem;
 }
 .right-hero label, input {
-    font-size: 1rem;
+    font-size: var(--size-vsmall);
 }
+    /* Bottom-right container */
+.right-hero .submit-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--size-medium);
+    
+    padding: calc(var(--spacing-medium) + 2rem) var(--spacing-large) var(--spacing-vlarge) var(--spacing-large);
+    
+    font-size: calc(var(--size-vsmall) + 0.2rem);
+}
+.right-hero button {
+    text-align: center;
+    padding: calc(var(--spacing-medium)) calc(var(--spacing-large) - 1.5rem);
+    
+    color: white;
+    font-weight: bold;
+    background-color: var(--color-green);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+.right-hero a {
+    color: var(--color-green);
+    font-weight: bold;
+}
+
+
 
 
 

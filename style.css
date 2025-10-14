@@ -118,6 +118,7 @@ input {
 .right-hero {
     width: 60vw;
     height: 100vh;
+    overflow: auto;  /* if overflow, show scrollbar */
 
     background-color: rgb(235, 235, 235);
 }
@@ -143,7 +144,7 @@ input {
     column-gap: 4rem;
     row-gap: 2rem;
 
-    max-width: 60%;
+    max-width: 85%;
     margin-top: var(--spacing-medium);
 }
 .right-hero .input {
@@ -167,6 +168,7 @@ input {
     padding: calc(var(--spacing-medium) + 2rem) var(--spacing-large) var(--spacing-vlarge) var(--spacing-large);
     
     font-size: calc(var(--size-vsmall) + 0.2rem);
+    transition: 0.3s ease;
 }
 .right-hero button {
     text-align: center;
@@ -178,12 +180,24 @@ input {
     border-radius: 10px;
     box-shadow: var(--shadow);
 }
+.right-hero button:hover {
+    transform: translateY(-3px);
+}
+.right-hero button:active {
+    transform: scale(0.99);
+}
 .right-hero a {
     color: var(--color-green);
     font-weight: bold;
 }
 
-
+/* Media query */
+@media (max-width: 1800px) {
+    .right-hero h2 {
+        font-size: var(--size-small);
+        transition: 0.3s ease;
+    }
+};
 
 
 

@@ -57,13 +57,13 @@ button {
     --size-vsmall: clamp(0.5rem, 1vw, 1rem);
     --spacing-vlarge: clamp(2rem, 7vw, 10rem);
     --spacing-large: clamp(2rem, 3vw, 6rem);
-    --spacing-medium: 2rem;
-    --spacing-small: 0.1rem;
+    --spacing-medium: clamp(0.5rem, 1vw, 1rem);
     --border-light: 1px solid rgba(0, 0, 0, 0.35);
     --border-medium: 1px solid rgba(0, 0, 0, 0.55);
 }
 body {
    display: flex;
+   font-size: var(--size-medium);
 }
 input {
     border: var(--border-light);
@@ -113,12 +113,14 @@ input {
 }
 
 /* Right section */
+
 .right-hero {
     width: 60vw;
     height: 100vh;
 
     background-color: rgb(235, 235, 235);
 }
+
 .right-hero .intro-cont {
     display: flex;
     flex-direction: column;
@@ -127,11 +129,31 @@ input {
     width: clamp(45ch, 65%, 75ch);  /* suggested line length */
     max-width: 100%;  /* to prevent overflow */
     padding: var(--spacing-vlarge) var(--spacing-large) var(--spacing-large) var(--spacing-large);
-    
-    font-size: var(--size-medium);
 }
+
 .right-hero form {
+    padding: var(--spacing-medium) var(--spacing-large) calc(var(--spacing-medium) + 2rem) var(--spacing-large);
     background-color: white;
+}
+.right-hero .form-inputs-cont {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 4rem;
+    row-gap: 2rem;
+
+    max-width: 60%;
+    margin-top: var(--spacing-medium);
+}
+.right-hero .input {
+    display: flex;
+    flex-direction: column;
+}
+.right-hero input {
+    width: 18rem;
+    height: 2rem;
+}
+.right-hero label, input {
+    font-size: 1rem;
 }
 
 

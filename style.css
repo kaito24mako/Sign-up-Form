@@ -50,11 +50,12 @@ button {
 :root {
     --font-norse: "Norse", system-ui, "Segoe UI", Helvetica, sans-serif;
     --font-segoe: "Segoe UI", Helvetica, sans-serif;
-    --font-vlarge: 6rem;
-    --font-large: 4rem;
-    --font-medium: 2rem;
-    --font-small: 1rem;
-    --font-vsmall: 0.6rem;
+    --size-vlarge: clamp(4rem, 6vw, 7rem);
+    --size-large: 4rem;
+    --size-medium: 2rem;
+    --size-small: 1rem;
+    --size-vsmall: clamp(0.5rem, 1vw, 1rem);
+    --spacing-small: 0.1rem;
     --border-light: 1px solid rgba(0, 0, 0, 0.35);
     --border-medium: 1px solid rgba(0, 0, 0, 0.55);
 }
@@ -67,9 +68,6 @@ input {
 }
 
 /* Left section */
-.left-hero h1 {
-    font-family: var(--font-norse);
-}
 .left-hero {
     display: flex;
     justify-content: center;
@@ -85,23 +83,35 @@ input {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 23%;
+    top: 22%;
 
     width: 100%;
-    padding: var(--font-vsmall);
+    padding: var(--spacing-small);
 
-    font-size: var(--font-vlarge);
+    font-family: var(--font-norse);
+    font-size: var(--size-vlarge);
     background-color: rgba(0, 0, 0, 0.4);
+}
+.left-hero .title-cont img {
+    width: var(--size-vlarge);
 }
 .left-hero #credit {
     position: absolute;
-    top: 97%;
+    top: 96%;
+    font-size: var(--size-vsmall);
+}
+.left-hero #background {
+    width: 100%;
 }
 .left-hero a {
     text-decoration: underline;
 }
 .left-hero a:hover {
     color: orange;
+}
+
+.left-hero {
+
 }
 
 

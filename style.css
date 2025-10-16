@@ -159,6 +159,17 @@ input {
 .right-hero label, input {
     font-size: var(--size-vsmall);
 }
+.right-hero input:focus {
+    outline: none;  /* removes default outline on focus */
+    border: 1px solid blue;
+    box-shadow: var(--shadow);
+}
+.right-hero input[type="password"]:valid {
+    border-color: green;
+}
+.right-hero input[type="password"]:invalid {
+    border-color: red;
+}
     /* Bottom-right container */
 .right-hero .submit-cont {
     display: flex;
@@ -197,6 +208,9 @@ input {
     .right-hero h2 {
         font-size: var(--size-small);
         transition: var(--transition);
+    }
+    .right-hero label, input {
+        font-size: calc(var(--size-vsmall) - 0.1rem);
     }
 };
 

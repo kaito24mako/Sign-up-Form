@@ -30,6 +30,7 @@ html {
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 0;
+
     font-size: inherit; 
 }
 img, picture, video, canvas, svg {
@@ -37,10 +38,10 @@ img, picture, video, canvas, svg {
     max-width: 100%;
 }
 button, input, textarea, select, a {
+    border: none;
     font: inherit;
     color: inherit;
     background-color: inherit;
-    border: none;
 }
 button {
     cursor: pointer;
@@ -66,6 +67,7 @@ button {
 }
 body {
    display: flex;
+
    font-size: var(--size-medium);
 }
 input {
@@ -78,34 +80,34 @@ input {
     display: flex;
     justify-content: center;
     position: relative;
-
     width: 40vw;
     height: 100vh;
 
     color: white;
 }
-.left-hero .title-cont {
+.title-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
     top: 22%;
-
     width: 100%;
 
     font-family: var(--font-norse);
     font-size: var(--size-vlarge);
+
     background-color: rgba(0, 0, 0, 0.4);
 }
-.left-hero .title-cont img {
+.title-wrapper img {
     width: var(--size-vlarge);
 }
-.left-hero #credit {
+#credit {
     position: absolute;
     top: 96%;
+
     font-size: var(--size-vsmall);
 }
-.left-hero #background {
+#background {
     width: 100%;
 }
 .left-hero a {
@@ -117,102 +119,105 @@ input {
 
 /* Right section */
 .right-hero {
+    overflow: auto;
     width: 60vw;
-    height: 100vh;
-    overflow: auto;  /* if overflow, show scrollbar */
+    height: 100vh;  
 
     background-color: rgb(235, 235, 235);
 }
-    /* Top-right container */
-.right-hero .intro-cont {
+   
+.intro-wrapper {
     display: flex;
     flex-direction: column;
-    gap: var(--size-medium);
-
-    width: clamp(45ch, 65%, 75ch);  /* suggested line length */
     max-width: 100%;  /* to prevent overflow */
+    width: clamp(45ch, 65%, 75ch);  /* suggested line length */
+
     padding: var(--spacing-vlarge) var(--spacing-large) var(--spacing-large) var(--spacing-large);
+    gap: var(--size-medium);
 }
-    /* Middle-right container */
-.right-hero form {
+
+form {
     padding: var(--spacing-medium) var(--spacing-large) calc(var(--spacing-medium) + 2rem) var(--spacing-large);
+    
     background-color: white;
     box-shadow: var(--shadow);
 }
-.right-hero .form-inputs-cont {
+.form-wrapper {
     display: flex;
     flex-wrap: wrap;
+    max-width: 85%;
+
+    margin-top: var(--spacing-medium);
     column-gap: 4rem;
     row-gap: 2rem;
-
-    max-width: 85%;
-    margin-top: var(--spacing-medium);
 }
-.right-hero .input {
+.form-field {
     display: flex;
     flex-direction: column;
 }
-.right-hero input {
+input, label {
+    font-size: var(--size-vsmall);
+}
+input {
     width: 18rem;
     height: 2rem;
 }
-.right-hero label, input {
-    font-size: var(--size-vsmall);
-}
-.right-hero input:focus {
+input:focus {
     outline: none;  /* removes default outline on focus */
     border: 1px solid blue;
     box-shadow: var(--shadow);
 }
-.right-hero input[type="password"]:valid {
+input[type="password"]:valid {
     border-color: green;
 }
-.right-hero input[type="password"]:invalid {
+input[type="password"]:invalid {
     border-color: red;
 }
-    /* Bottom-right container */
-.right-hero .submit-cont {
+    
+.submit-wrapper {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: var(--size-medium);
     
     padding: calc(var(--spacing-medium) + 2rem) var(--spacing-large) var(--spacing-vlarge) var(--spacing-large);
-    
+    gap: var(--size-medium);
+
     font-size: calc(var(--size-vsmall) + 0.2rem);
+
     transition: var(--transition);
 }
-.right-hero button {
+button {
     text-align: center;
     padding: calc(var(--spacing-medium)) calc(var(--spacing-large) - 1.5rem);
     
     color: white;
     font-weight: bold;
+
     background-color: var(--color-green);
     border-radius: 10px;
     box-shadow: var(--shadow);
 }
-.right-hero button:hover {
+button:hover {
     transform: translateY(-3px);
 }
-.right-hero button:active {
+button:active {
     transform: scale(0.99);
 }
-.right-hero a {
+.submit-wrapper a {
     color: var(--color-green);
     font-weight: bold;
 }
 
 /* Media query */
 @media (max-width: 1800px) {
-    .right-hero h2 {
+    h2 {
         font-size: var(--size-small);
         transition: var(--transition);
     }
-    .right-hero label, input {
+    label, input {
         font-size: calc(var(--size-vsmall) - 0.1rem);
     }
-};
+}
 
 
 
